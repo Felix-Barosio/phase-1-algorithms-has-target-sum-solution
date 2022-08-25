@@ -1,5 +1,12 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(let i = 0; i < array.length; i++) {
+    const data = target - array[i];
+    for(let j = i + 1; j < array.length; j++) {
+      if(array[j] === data) return true;
+    }
+  }
+  return false;
 }
 
 /* 
@@ -8,10 +15,14 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  iterate over the array of numbers
+  for current num identifying complementary numbers that add
+
 */
 
 /*
   Add written explanation of your solution here
+  hasTargetSum function checks if two numbers add upto the target numbers.
 */
 
 // You can run `node index.js` to view these console logs
